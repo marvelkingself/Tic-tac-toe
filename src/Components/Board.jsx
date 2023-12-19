@@ -2,6 +2,7 @@ import React from 'react'
 import Square from './Square';
 
 function Board({ xIsNext, squares, onPlay }) {
+    
     function handleClick(i) {
       if (calculateWinner(squares) || squares[i]) {
         return;
@@ -13,6 +14,7 @@ function Board({ xIsNext, squares, onPlay }) {
         nextSquares[i] = 'O';
       }
       onPlay(nextSquares);
+
     }
   
     const winner = calculateWinner(squares);
